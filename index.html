@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SrcFiddlr</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css">
+
+
+</head>
+<body>
+
+	<div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./" class="navbar-brand">SrcFiddlr</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+
+
+        </div>
+      </div>
+    </div>
+
+	<div role="main" class="container">
+  
+  <h1>SrcFiddlr Component</h1>
+</div>
+
+<p>SrcFiddlr uses media queries to load the images that are appropriate for a user's browsers, making responsive images a snap.</p>
+
+<p><a href="https://github.com/stvgroup/Style-Guide/blob/master/source/javascripts/srcfiddlr.js">View file on Github</a></p>
+
+<img style="width: 100%;" 
+data-srcset="
+[./images/smallest.jpg, default], 
+[./images/small.jpg, small], 
+[./images/med.jpg, medium], 
+[./images/large.jpg, large]" 
+src="./images/smallest.jpg">
+
+<p>The SrcFiddlr component uses the <code>data-srcset</code> attribute for specifying media queries and the images sources. Each rule is comma delimited and wrapped in square brackets. The first parameter is the image path and the second parameter is the media query. <b>The last rule that evaluates to true will be the image that gets loaded.</b></p>
+
+<script src="https://gist.github.com/mooklateer/7100055.js"></script>
+
+<h2>Named Queries</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Media Query</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>default</td>
+      <td><code>only screen and (min-width: 1px)</code></td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td><code>only screen and (min-width: 768px)</code></td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td><code>only screen and (min-width: 1280px)</code></td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td><code>only screen and (min-width: 1440px)</code></td>
+    </tr>
+    <tr>
+      <td>landscape</td>
+      <td><code>only screen and (orientation: landscape)</code></td>
+    </tr>
+    <tr>
+      <td>portrait</td>
+      <td><code>only screen and (orientation: portrait)</code></td>
+    </tr>
+    <tr>
+      <td>retina <small>(4.2.1)</small></td>
+      <td><code>only screen and (-webkit-min-device-pixel-ratio: 2),<br>
+        only screen and (min--moz-device-pixel-ratio: 2),<br>
+        only screen and (-o-min-device-pixel-ratio: 2/1),<br>
+        only screen and (min-device-pixel-ratio: 2),<br>
+        only screen and (min-resolution: 192dpi),<br>
+        only screen and (min-resolution: 2dppx)</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To use named queries just pass in the name where you would normally specify your query.</p>
+
+<script src="https://gist.github.com/mooklateer/7100294.js"></script>
+
+<h2>Custom Named Queries</h2>
+<p>Custom queries can be defined during initialization and are an easy way to make your queries more readable. You can also override the default queries in this way:</p>
+
+<script src="https://gist.github.com/mooklateer/7100469.js"></script>
+
+<h2>Adding new images after page load</h2>
+<p>If you add new images after the page has been loaded, you will need to trigger the <code>update()</code> function of your SrcFiddlr instance.</p>
+
+<script src="https://gist.github.com/mooklateer/7100596.js"></script>
+
+
+    </div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="" src="https://rawgithub.com/mooklateer/srcfiddlr/master/srcfiddlr.js"></script>
+
+	<script>
+		skivr.init();
+	</script>
+
+</body>
+</html>
