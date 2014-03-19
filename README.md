@@ -53,3 +53,5 @@ var srcFiddlrInstance = SrcFiddlr.init({
  
 srcFiddlrInstance.update();
 ```
+
+See more documentation and a demo example [here](http://mooklateer.github.io/srcfiddlr/)
