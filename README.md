@@ -1,4 +1,4 @@
-srcfiddlr
+SrcFiddlr
 =========
 
 SrcFiddlr uses media queries to load the images that are appropriate for a user's browsers, making responsive images a breeze.
@@ -12,7 +12,7 @@ The SrcFiddlr component uses the data-srcset attribute for specifying media quer
 [./images/med.jpg, medium], 
 [./images/large.jpg, large]" src="./images/small.jpg">
 ```
-named queries
+Named queries
 ------
 
 | Name | media query |
@@ -31,7 +31,7 @@ To use named queries just pass in the name where you would normally specify your
 data-srcset="[image_path, large], [image_path, landscape]"
 ```
 
-custom named queries
+Custom named queries
 ------
 Custom queries can be defined during initialization and are an easy way to make your queries more readable. You can also override the default queries in this way:
 ```javascript
@@ -41,7 +41,7 @@ var srcFiddlrInstance = SrcFiddlr.init({
 	}
 });
 ```
-adding new images after page load
+Adding new images after page load
 ------
 If you add new images after the page has been loaded, you will need to trigger the update() function of your SrcFiddlr instance.
 ```javascript
