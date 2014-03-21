@@ -9,9 +9,9 @@ var SrcFiddlr = (function (window, document, undefined) {
 
         this.namedQueries = {
         'default': options.namedQueries.default     ||  'only screen and (min-width: 1px)',
-        small: options.namedQueries.small           ||  'only screen and (min-width: 768px)',
-        medium: options.namedQueries.medium         ||  'only screen and (min-width: 1280px)',
-        large: options.namedQueries.large           ||  'only screen and (min-width: 1440px)',
+        small: options.namedQueries.small           ||  'only screen and (min-width: 479px)',
+        medium: options.namedQueries.medium         ||  'only screen and (min-width: 767px)',
+        large: options.namedQueries.large           ||  'only screen and (min-width: 1023px)',
         landscape: options.namedQueries.landscape   ||  'only screen and (orientation: portrait)',
         portrait: options.namedQueries.portrait     ||  'only screen and (orientation: portrait)',
         retina: options.namedQueries.retina         ||  'only screen and (-webkit-min-device-pixel-ratio: 2),' + 
