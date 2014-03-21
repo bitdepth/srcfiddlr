@@ -18,9 +18,9 @@ Named queries
 | Name | media query |
 |------|------------ |
 | default | only screen and (min-width: 1px) |
-| small | only screen and (min-width: 768px) |
-| medium | only screen and (min-width: 1280px) |
-| large | only screen and (min-width: 1440px) |
+| small | only screen and (min-width: 479px) |
+| medium | only screen and (min-width: 767px) |
+| large | only screen and (min-width: 1023px) |
 | landscape | only screen and (orientation: landscape) |
 | portrait | only screen and (orientation: portrait) |
 | retina | only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)|
